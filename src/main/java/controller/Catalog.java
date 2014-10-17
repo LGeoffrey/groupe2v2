@@ -1,5 +1,5 @@
 /*
- * Catalog.java TEST4
+ * Catalog.java TEST2
  *
  */
 package controller;
