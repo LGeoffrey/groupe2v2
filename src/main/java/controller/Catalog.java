@@ -5,6 +5,7 @@
 package controller;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -56,6 +57,11 @@ public class Catalog implements Serializable {
 
     }
 
+    public void addCat() {
+        Item it = new Item("124", "1", "Cat Women", "Cat test!", BigDecimal.valueOf(10.0));
+        itemFacade.create(it);
+    }
+
     public String next() {
         reset(false);
         getPagingInfo().nextPage();
@@ -72,6 +78,11 @@ public class Catalog implements Serializable {
         this.item = item;
         return "detail";
     }
+    
+    public String showUpload(Item item) {
+        this.item = item;
+        return "upload";
+    }
 
     public int getItemCount() {
         return itemFacade.getItemCount();
@@ -86,6 +97,3 @@ public class Catalog implements Serializable {
         }
     }
 }
-
-
-

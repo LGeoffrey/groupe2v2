@@ -40,6 +40,7 @@ public class Item implements Serializable {
     private String imagethumburl;
     @Basic(optional = false)
     private BigDecimal price;
+    private String url_img2;
 
     public Item() {
     }
@@ -135,6 +136,20 @@ public class Item implements Serializable {
     @Override
     public String toString() {
         return "model.Item[itemid=" + itemid + "]";
+    }
+
+    /**
+     * @return the url_img2
+     */
+    public String getUrl_img2() {
+        return url_img2;
+    }
+
+    /**
+     * @param url_img2 the url_img2 to set
+     */
+    public void setUrl_img2(String url_img2) {
+        this.url_img2 = url_img2;
     }
 
 }

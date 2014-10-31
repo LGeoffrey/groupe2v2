@@ -69,7 +69,8 @@ Other names may be trademarks of their respective owners.
                 <h:graphicImage library="images" name="#{catalog.item.imageurl}" title="Imageurl" />
                 <h:outputText value="#{msgs.Price}:"/>
                 <h:outputText value="#{catalog.item.price}" title="Price" />
-                
+                <h:outputText value="#{msgs.Photo}:"/>
+                <h:graphicImage library="images" name="#{catalog.item.url_img2}" title="Imageurl" />
             </h:panelGrid>
             <h:commandButton id="back" value="Back" action="list"/>
         </h:form>
