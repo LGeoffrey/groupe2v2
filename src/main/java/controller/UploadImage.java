@@ -30,7 +30,7 @@ public class UploadImage {
     public String upload(Item it) throws IOException {
         InputStream inputStream = file.getInputStream();        
         String fileName = getFileName(file);
-        FileOutputStream outputStream = new FileOutputStream("/home/florian/NetBeansProjects/groupe0_CSS/src/main/webapp/resources/images/" + fileName);        
+        FileOutputStream outputStream = new FileOutputStream("/home1/info2/legrand.geoffrey/NetBeansProjects/petcatalog/src/main/webapp/resources/images/" + fileName);        
         
         byte[] buffer = new byte[4096];        
         int bytesRead = 0;        

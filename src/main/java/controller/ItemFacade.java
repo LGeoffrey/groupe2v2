@@ -42,6 +42,10 @@ public class ItemFacade implements Serializable {
         return em.createQuery("select object(o) from Item as o").getResultList();
     }
 
+    public int findMaxId() {
+        return ((Long) em.createQuery("select COUNT(o) from Item as o").getSingleResult()).intValue();
+    }
+    
     public List<Item> findRange(int maxResults, int firstResult) {
         Query q = em.createQuery("select object(o) from Item as o");
         q.setMaxResults(maxResults);

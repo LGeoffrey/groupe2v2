@@ -57,8 +57,8 @@ public class Catalog implements Serializable {
 
     }
 
-    public void addCat() {
-        Item it = new Item("124", "1", "Cat Women", "Cat test!", BigDecimal.valueOf(10.0));
+    public void addCat() {   
+        Item it = new Item( String.valueOf(itemFacade.findMaxId()+100), "1", "Cat Women", "Cat test!", BigDecimal.valueOf(10.0));
         itemFacade.create(it);
     }
 
